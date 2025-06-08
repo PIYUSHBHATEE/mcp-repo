@@ -1,0 +1,30 @@
+{
+  "name": "mcp-stateless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "npm run build && node dist/index.js",
+    "start:sse": "node dist/sse.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "@types/node-fetch": "^2.6.12",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mcp-proxy": "^2.14.2",
+    "oauth-1.0a": "^2.2.6",
+    "twitter-api-v2": "^1.23.2"
+  }
+}
