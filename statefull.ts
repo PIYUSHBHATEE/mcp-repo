@@ -12,7 +12,7 @@ app.use(express.json());
 // Map to store transports by session Id
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
-// Handle POST requests for client-to-server communication 
+// Handle POST requests for client-to-server communication hsgsd
 app.post('/mcp', async (req, res) => {
   console.log("Inside post /mcp",req.body)
   // Check for existing session ID
