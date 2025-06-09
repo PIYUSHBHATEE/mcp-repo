@@ -5,9 +5,6 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js"
 import { z } from "zod";
 import cors from 'cors'
-import axios from "axios";
-import OAuth from "oauth-1.0a";
-import crypto from "crypto";
 import { TwitterApi } from 'twitter-api-v2';
 
 // Define environment variables for Twitter API credentials
