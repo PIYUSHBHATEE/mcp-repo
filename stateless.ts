@@ -9,7 +9,7 @@ import { TwitterApi } from 'twitter-api-v2';
 
 // Define environment variables for Twitter API credentials
 // const consumerKey =hello
-// const consumerSecret = 
+// const consumerSecret = hello
 // const accessToken =
 // const accessTokenSecret =
 const client = new TwitterApi({
