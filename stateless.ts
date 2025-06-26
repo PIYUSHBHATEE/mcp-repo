@@ -11,7 +11,7 @@ import { TwitterApi } from 'twitter-api-v2';
 // const consumerKey =hello
 // const consumerSecret = hello
 // const accessToken = hello
-// const accessTokenSecret =
+// const accessTokenSecret = hello
 const client = new TwitterApi({
   appKey: "01IEO3599yPeWdx6ITbZlXz1q",
   appSecret:  "gqhw56pToq3iqcZsj1EyPc1PzhIgABE0MstK9lHkgLMhnMrKQ8",
