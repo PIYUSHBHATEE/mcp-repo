@@ -8,10 +8,10 @@ import cors from 'cors'
 import { TwitterApi } from 'twitter-api-v2';
 
 // Define environment variables for Twitter API credentials
-// const consumerKey = "01IEO3599yPeWdx6ITbZlXz1q";
-// const consumerSecret = "gqhw56pToq3iqcZsj1EyPc1PzhIgABE0MstK9lHkgLMhnMrKQ8"
-// const accessToken = "1748953214387417088-U9UiIdDpxr21oUgWpY3lSRAVFzjuc5"
-// const accessTokenSecret = "MlKtjtVOBlzE5k7SplAvUeOMnXmpHtPF6WzW0HmYhr2TW"
+// const consumerKey =
+// const consumerSecret = 
+// const accessToken =
+// const accessTokenSecret =
 const client = new TwitterApi({
   appKey: "01IEO3599yPeWdx6ITbZlXz1q",
   appSecret:  "gqhw56pToq3iqcZsj1EyPc1PzhIgABE0MstK9lHkgLMhnMrKQ8",
