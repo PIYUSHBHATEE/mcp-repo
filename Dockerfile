@@ -37,4 +37,4 @@ ENV NODE_ENV=production
 EXPOSE 3001
 
 # 4) Start the server
-CMD ["node", "dist/statefull.js"]
+CMD ["node", "dist/stateless.js"]
