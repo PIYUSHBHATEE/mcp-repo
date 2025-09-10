@@ -65,6 +65,14 @@ const getServer = () => {
           };
         }
       });
+  
+  server.tool(
+      "echo",
+      { message: z.string() },
+      async ({ message }) => ({
+        content: [{ type: "text", text: `Tool echo: ${message}` }]
+      })
+    );
 
 
     return server;
