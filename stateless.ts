@@ -5,19 +5,13 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js"
 import { z } from "zod";
 import cors from 'cors'
-import { TwitterApi } from 'twitter-api-v2';
 
 // Define environment variables for Twitter API credentials
 // const consumerKey =hello
 // const consumerSecret = hello
 // const accessToken = hello
 // const accessTokenSecret = 
-const client = new TwitterApi({
-  appKey: "01IEO3599yPeWdx6ITbZlXz1q",
-  appSecret:  "gqhw56pToq3iqcZsj1EyPc1PzhIgABE0MstK9lHkgLMhnMrKQ8",
-  accessToken: "1748953214387417088-U9UiIdDpxr21oUgWpY3lSRAVFzjuc5",
-  accessSecret: "MlKtjtVOBlzE5k7SplAvUeOMnXmpHtPF6WzW0HmYhr2TW"
-});
+
 
 const app = express();
 app.use(express.json());
@@ -32,39 +26,6 @@ app.use(
 
 const getServer = () => {
     const server = new McpServer({ name: 'stateless-server', version: '1.0.0' });
-    server.tool(
-        "echo",
-        { message: z.string() },
-        async ({ message }) => ({
-          content: [{ type: "text", text: `Tool echo: ${message}` }]
-        })
-      );
-
-
-      server.tool('post_tweet', { text: z.string().min(1).max(280)}, async ({ text }) => {
-        try {
-          const response = await client.v2.tweet(text);
-          console.log('Tweet posted successfully:', response.data);
-          return {
-            content: [
-              {
-                type: 'text',
-                text: `Tweet posted successfully: https://twitter.com/user/status/${response.data.id}`,
-              },
-            ],
-          };
-        } catch (error: any) {
-          console.error('Error posting tweet:', error);
-          return {
-            content: [
-              {
-                type: 'text',
-                text: `Error posting tweet: ${error.message}`,
-              },
-            ],
-          };
-        }
-      });
   
   server.tool(
       "echo",
