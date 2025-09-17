@@ -15,7 +15,7 @@ const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 // Handle POST requests 
 app.post('/mcp', async (req, res) => {
   console.log("Inside post /mcp",req.body)
-  // Check for existing session ID
+  // Check for existing session
   const sessionId = req.headers['mcp-session-id'] as string | undefined;
   console.log("sessionID line 20",sessionId)
     const tempsessionId = req.headers['mcp-temp-session-id'] as string | undefined;
