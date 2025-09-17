@@ -9,7 +9,7 @@ import { z } from "zod";
 const app = express();
 app.use(express.json());
 
-// Map to 
+// 
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
 // Handle POST requests for client-to-server communication
