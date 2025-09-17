@@ -12,7 +12,7 @@ app.use(express.json());
 
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
-// Handle POST requests 
+// Handle POST
 app.post('/mcp', async (req, res) => {
   console.log("Inside post /mcp",req.body)
   // Check for existing session
