@@ -39,7 +39,9 @@ const getServer = () => {
     return server;
   };
 
-
+app.get('/test',async (req:Request,res:Response)=>{
+  res.send(process.env.PORT)
+})
 
 app.post('/mcp', async (req: Request, res: Response) => {
   // In stateless mode, create a new instance of transport and server for each request
