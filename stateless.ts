@@ -16,9 +16,6 @@ console.log("saDAFJBADSANDBADADNBASDN")
 console.log("saDAFJBADSANDBADADNBASDN")
 console.log("saDAFJBADSANDBADADNBASDN")
 console.log("saDAFJBADSANDBADADNBASDN")
-console.log("saDAFJBADSANDBADADNBASDN")
-console.log("saDAFJBADSANDBADADNBASDN")
-console.log("saDAFJBADSANDBADADNBASDN")
 
 const app = express();
 app.use(express.json());
